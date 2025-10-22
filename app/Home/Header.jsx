@@ -11,6 +11,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { PiNewspaperClippingDuotone } from "react-icons/pi";
 import { RiContactsBook3Fill } from "react-icons/ri";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import Link from "next/link";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -86,18 +87,18 @@ export default function Header() {
 
             {/* Center Menu */}
             <ul className="flex flex-col space-y-2 text-gray-800 font-medium">
-              <li className="flex items-center gap-2 cursor-pointer hover:text-black">
+              <link href="/" className="flex items-center gap-2 cursor-pointer hover:text-black">
                 <FaHome /> Home
-              </li>
+              </link>
               <li className="flex items-center gap-2 cursor-pointer hover:text-black">
                 <FaCartArrowDown /> Shop
               </li>
               <li className="flex items-center gap-2 cursor-pointer hover:text-black">
                 <RiContactsBook3Fill /> Contact
               </li>
-              <li className="flex items-center gap-2 cursor-pointer hover:text-black">
+              <Link href='/blog' className="flex items-center gap-2 cursor-pointer hover:text-black">
                 <PiNewspaperClippingDuotone /> Blog
-              </li>
+              </Link>
             </ul>
 
             {/* Right Menu */}
